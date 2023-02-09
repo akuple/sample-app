@@ -6,7 +6,7 @@ RUN dotnet restore
 
 COPY . ./aspnetapp/
 WORKDIR /source/aspnetapp
-RUN dotnet publish -c release -o /app --no-restore --os linux --arch x64
+RUN dotnet publish -c release -o /app --no-restore
 
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
